@@ -2,7 +2,10 @@ from rdflib import Graph, Literal, RDF, Namespace
 from rdflib.namespace import XSD
 from sentence_transformers import SentenceTransformer
 import os
+import requests
 import shutil
+
+os.environ['CURL_CA_BUNDLE'] = ''
 
 archives = ["csis", "scpe"]
 input_path = "/home/input_ttl_files"
