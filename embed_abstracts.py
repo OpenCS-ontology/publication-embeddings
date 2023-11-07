@@ -1,9 +1,17 @@
 from rdflib import Graph, Literal, RDF, Namespace
 from rdflib.namespace import XSD
-from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModel
+from ontology_parsing.graph_utils import get_uri_to_colname_dict_from_ontology
+from ontology_parsing.graph_utils import get_concepts_pref_labels
+from ontology_parsing.data_loading import (
+    get_all_concept_file_paths,
+    get_graphs_from_files,
+)
 import os
+from os import path
 import requests
 import shutil
+import json
 
 os.environ['CURL_CA_BUNDLE'] = ''
 
@@ -15,7 +23,14 @@ if os.path.exists(output_path):
   shutil.rmtree(output_path)
 os.mkdir(output_path)
 
-model = SentenceTransformer('sentence-transformers/allenai-specter')
+tokenizer = AutoTokenizer.from_pretrained('allenai/specter2_aug2023refresh_base')
+
+model_papers = AutoModel.from_pretrained('allenai/specter2_aug2023refresh_base')
+model_papers.load_adapter("allenai/specter2_aug2023refresh", source="hf", load_as="specter2_proximity", set_active=True)
+
+model_concepts = AutoModel.from_pretrained('allenai/specter2_aug2023refresh_base')
+model_concepts.load_adapter("allenai/specter2_adhoc_query", source="hf", load_as="specter2_adhoc_query", set_active=True)
+
 
 for archive in archives:
     root_dir = os.path.join(input_path, archive)
@@ -56,7 +71,15 @@ for archive in archives:
                 
                 for row in result:
                     abstract = row['abstract'].toPython()
-                    embedding = model.encode(abstract)
+                    title = row['title'].toPython()
+                    
+                    text_batch = [title + tokenizer.sep_token + abstract]
+
+                    inputs = tokenizer(text_batch, padding=True, truncation=True,
+                                   return_tensors="pt", return_token_type_ids=False, max_length=768)
+                    
+                    output = model_papers(**inputs)
+                    embedding = output.last_hidden_state[:, 0, :]
 
                     paper = g.value(predicate=RDF.type, object=fabio.ResearchPaper)
                     blank_node = g.value(predicate=datacite.hasDescriptionType, object=datacite.abstract)
@@ -67,5 +90,44 @@ for archive in archives:
                         if isinstance(g, str):
                             g = g.encode()
                         file.write(g)
-                        print(f"Paper '{row['title']}' embedded")
+                        print(f"Paper '{title}' embedded")
 
+
+
+ONTOLOGY_CORE_DIR = path.join(f"{os.getcwd()}/OpenCS", r"ontology/core")
+
+output_path_concepts = "/home/output_concepts_json"
+
+if os.path.exists(output_path_concepts):
+  shutil.rmtree(output_path_concepts)
+os.mkdir(output_path_concepts)
+
+
+try:
+    print(f"Reading the OpenCS ontology files from: {ONTOLOGY_CORE_DIR}")
+    files = get_all_concept_file_paths(ONTOLOGY_CORE_DIR)
+    print(f"Parsing the ontology files")
+        # loading the files data into graphs with rdflib
+    graphs = get_graphs_from_files(files)
+
+    print(
+        "Creating the ES baseline index with all predicates from the ontology as columns."
+    )
+        # creating a dictionary with concepts and their preferred labels
+    concepts_dict = get_concepts_pref_labels(graphs)
+
+    for key, value in concepts_dict.items():
+        concept_text = value
+        output = model_concepts.encode(concept_text)
+        value = dict()
+        value['text'] = concept_text
+        value['embedding'] = embedding
+
+    json_object = json.dumps(concepts_dict, indent=4)
+ 
+    # Writing to sample.json
+    with open("opens_concepts.json", "w") as outfile:
+        outfile.write(json_object)
+
+except:
+    print("Error with concepts")
