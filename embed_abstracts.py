@@ -79,7 +79,7 @@ for archive in archives:
                                    return_tensors="pt", return_token_type_ids=False, max_length=768)
                     
                     output = model_papers(**inputs)
-                    embedding = output.last_hidden_state[:, 0, :]
+                    embedding = output.last_hidden_state[:, 0, :].tolist()[0]
 
                     paper = g.value(predicate=RDF.type, object=fabio.ResearchPaper)
                     blank_node = g.value(predicate=datacite.hasDescriptionType, object=datacite.abstract)
@@ -94,7 +94,7 @@ for archive in archives:
 
 
 
-ONTOLOGY_CORE_DIR = path.join(f"{os.getcwd()}/OpenCS", r"ontology/core")
+ONTOLOGY_CORE_DIR = path.join(f"/OpenCS", r"ontology/core")
 
 output_path_concepts = "/home/output_concepts_json"
 
@@ -103,31 +103,42 @@ if os.path.exists(output_path_concepts):
 os.mkdir(output_path_concepts)
 
 
-try:
-    print(f"Reading the OpenCS ontology files from: {ONTOLOGY_CORE_DIR}")
-    files = get_all_concept_file_paths(ONTOLOGY_CORE_DIR)
-    print(f"Parsing the ontology files")
-        # loading the files data into graphs with rdflib
-    graphs = get_graphs_from_files(files)
 
-    print(
-        "Creating the ES baseline index with all predicates from the ontology as columns."
-    )
-        # creating a dictionary with concepts and their preferred labels
-    concepts_dict = get_concepts_pref_labels(graphs)
+print(f"Reading the OpenCS ontology files from: {ONTOLOGY_CORE_DIR}")
+files = get_all_concept_file_paths(ONTOLOGY_CORE_DIR)
+print(f"Parsing the ontology files")
+    # loading the files data into graphs with rdflib
+graphs = get_graphs_from_files(files)
 
-    for key, value in concepts_dict.items():
-        concept_text = value
-        output = model_concepts.encode(concept_text)
-        value = dict()
-        value['text'] = concept_text
-        value['embedding'] = embedding
+print(
+    "Creating the ES baseline index with all predicates from the ontology as columns."
+)
+    # creating a dictionary with concepts and their preferred labels
+concepts_dict = get_concepts_pref_labels(graphs)
 
-    json_object = json.dumps(concepts_dict, indent=4)
- 
-    # Writing to sample.json
-    with open("opens_concepts.json", "w") as outfile:
-        outfile.write(json_object)
+counter = 0
+out_dict = dict()
+for key, value in concepts_dict.items():
+    concept_text = value
+    text_batch = [concept_text]
+    inputs = tokenizer(text_batch, padding=True, truncation=True,
+                       return_tensors="pt", return_token_type_ids=False, max_length=768)
 
-except:
-    print("Error with concepts")
+    output = model_concepts(**inputs)
+    embedding = output.last_hidden_state[:, 0, :].tolist()[0]
+    in_dict = dict()
+    out_dict[key] = in_dict
+    in_dict['text'] = concept_text
+    in_dict['embedding'] = embedding
+    print(f"Concept {concept_text} embedded")
+
+    if counter > 100:
+        break
+    else:
+        counter += 1
+
+json_object = json.dumps(out_dict, indent=4)
+
+# Writing to sample.json
+with open(os.path.join(output_path_concepts,"opencs_concepts.json"), "w") as outfile:
+    outfile.write(json_object)

@@ -23,5 +23,8 @@ def get_graph_from_file(file_path: str, file_format: str = "ttl") -> Graph:
 def get_graphs_from_files(file_paths: List[str], files_format: str = "ttl"):
     graphs = []
     for f in file_paths:
-        graphs.append(get_graph_from_file(f, files_format))
+        try:
+            graphs.append(get_graph_from_file(f, files_format))
+        except:
+            print(f"Processing file {f} failed")
     return graphs
