@@ -16,10 +16,6 @@ archives = ["csis", "scpe"]
 input_path = "/home/input_ttl_files"
 output_path = "/home/output_ttl_files"
 
-if os.path.exists(output_path):
-    shutil.rmtree(output_path)
-os.mkdir(output_path)
-
 tokenizer = AutoTokenizer.from_pretrained("allenai/specter2_aug2023refresh_base")
 
 model_papers = AutoModel.from_pretrained("allenai/specter2_aug2023refresh_base")
