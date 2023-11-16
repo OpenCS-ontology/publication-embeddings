@@ -2,6 +2,7 @@ import glob
 from os import path
 from typing import List
 from rdflib import Graph
+import tqdm
 
 
 def get_all_concept_file_paths(
@@ -22,7 +23,7 @@ def get_graph_from_file(file_path: str, file_format: str = "ttl") -> Graph:
 
 def get_graphs_from_files(file_paths: List[str], files_format: str = "ttl"):
     graphs = []
-    for f in file_paths:
+    for f in tqdm.tqdm(file_paths, total=len(file_paths)):
         try:
             graphs.append(get_graph_from_file(f, files_format))
         except:
