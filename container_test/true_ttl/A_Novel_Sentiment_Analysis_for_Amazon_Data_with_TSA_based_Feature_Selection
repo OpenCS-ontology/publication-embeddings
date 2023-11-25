@@ -1,0 +1,1499 @@
+@prefix : <https://w3id.org/ocs/kg/papers/> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix co: <http://purl.org/co/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix default1: <https://w3id.org/ocs/ont/papers/> .
+@prefix deo: <http://purl.org/spar/deo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:paper_72b08ddb4 a fabio:ResearchPaper ;
+    prism:keyword "Feature optimization"^^xsd:string,
+        "Tunicate Swarm Algorithm"^^xsd:string,
+        "classifier"^^xsd:string,
+        "machine learning"^^xsd:string,
+        "sentiment analysis"^^xsd:string ;
+    dcterms:created "2021-02-09"^^xsd:date ;
+    dcterms:creator [ :hasItem :author_abf59c744,
+                :author_fc9c9f8b3 ] ;
+    dcterms:title "A Novel Sentiment Analysis for Amazon Data with TSA based Feature Selection"^^xsd:string ;
+    datacite:hasDescription [ datacite:hasDescriptionType datacite:abstract ;
+            literal:hasLiteralValue "Sentiment analysis of online product reviews has become a mainstream way for businesses on e-commerce platforms to promote their products and improve user satisfaction. Hence, it is necessary to construct an automatic sentiment analyser for automatic identification of sentiment polarity of the online product reviews. Traditional lexicon-based approaches used for sentiment analysis suffered from several accuracy issues while machine learning techniques require labelled training data. This paper introduces a hybrid sentiment analysis framework to bond the gap between both machine learning and lexicon-based approaches. A novel tunicate swarm algorithm (TSA) based feature reduction is integrated with the proposed hybrid method to solve the scalability issue that arises due to a large feature set. It reduces the feature set size to 43% without changing the accuracy (93%). Besides, it improves the scalability, reduces the computation time and enhances the overall performance of the proposed framework. From experimental analysis, it can be observed that TSA outperforms existing feature selection techniques such as particle swarm optimization and genetic algorithm. Moreover, the proposed approach is analysed with performance metrics such as recall, precision, F1-score, feature size and computation time."^^xsd:string ;
+            default1:hasWordEmbedding "[0.017825346440076828, -0.05932094156742096, 0.16688309609889984, 0.014394535683095455, 0.18868471682071686, 0.12519864737987518, -0.0474698580801487, 0.011519519612193108, -0.20487718284130096, -0.1640997976064682, 0.29036805033683777, 0.2786549925804138, 0.17730283737182617, -0.3022350072860718, 0.7472056150436401, -0.3914738595485687, -0.018467815592885017, 0.3090760111808777, 0.33171170949935913, -1.0022636651992798, 0.39938032627105713, -0.3088640868663788, -1.273404836654663, 0.16170406341552734, 0.31208816170692444, 1.0713393688201904, -0.5765774846076965, 0.5477252006530762, -0.456241250038147, -0.20585672557353973, -0.31909385323524475, -0.019332241266965866, 0.7544772028923035, -0.31560927629470825, -0.3622625470161438, 0.21612924337387085, 0.4114190638065338, -0.18661515414714813, 0.13244318962097168, 0.6395849585533142, -0.041989248245954514, 0.45356470346450806, 0.2911956012248993, -1.218294382095337, -0.19834816455841064, 0.4825994670391083, -0.2189420908689499, 0.6148797273635864, 0.30320754647254944, -0.21482180058956146, 0.9445583820343018, -1.1806625127792358, 0.46002283692359924, 0.7265137434005737, 0.6815415620803833, -0.06392695009708405, 0.18022340536117554, -0.7715032696723938, 0.014886252582073212, -0.34648218750953674, -0.6983907222747803, 0.6559420228004456, 0.45341387391090393, 0.08184000849723816, 1.7892036437988281, 0.4099428653717041, 0.5712677240371704, -0.18651288747787476, 0.749018132686615, 0.8762366771697998, 0.5947611927986145, -0.8685702681541443, -0.03164789080619812, 1.2336905002593994, 0.5017917156219482, 0.5936547517776489, 0.04892328009009361, 0.060726843774318695, -1.1204640865325928, -0.4506452977657318, -0.3861600160598755, -0.10128038376569748, 0.8992006182670593, -0.37029099464416504, 0.135289266705513, 0.9087017178535461, -0.5605337619781494, -0.1854851096868515, -0.18899308145046234, -0.06359943747520447, 0.7341293096542358, 0.8974252343177795, 0.518997311592102, 0.5580416917800903, -0.9741044640541077, 0.3270944356918335, -0.34100139141082764, 0.28384244441986084, 0.3070887625217438, 0.3966330587863922, -0.4343717694282532, 0.6973207592964172, -0.1989840716123581, 0.01895730197429657, 0.9543443322181702, 0.595234751701355, 0.8279362916946411, -0.01483212225139141, -0.23324599862098694, 0.6514213681221008, 0.39664193987846375, -1.2784955501556396, -0.49283355474472046, -0.04349590465426445, -0.053819842636585236, -0.49244436621665955, -0.39857035875320435, 0.2260272055864334, -0.6647582054138184, -0.2151651531457901, 0.06962007284164429, -0.7376436591148376, 0.3692046105861664, 0.441183477640152, 0.48285606503486633, 0.6183475852012634, -0.2270364910364151, 0.08154254406690598, 0.7903032302856445, -1.1379464864730835, -0.6072509288787842, -0.24945063889026642, 0.043398406356573105, -0.8495017290115356, 0.4907832443714142, 0.4550569951534271, -1.1888980865478516, -0.06550146639347076, -0.9691624641418457, 0.4257580041885376, -1.0796329975128174, 0.2466714233160019, 1.420226812362671, 1.087533950805664, -0.8226227760314941, -0.02254970371723175, -0.3060944676399231, -0.6683645248413086, 0.1455315500497818, 0.7481986880302429, -0.0007660610135644674, 0.11644777655601501, -0.7856090664863586, -0.16828817129135132, -0.28098294138908386, -0.8958741426467896, 0.18655836582183838, 0.33734944462776184, 0.028513124212622643, 0.17857779562473297, 0.5062277913093567, -0.44328421354293823, 0.9071505665779114, -1.1804640293121338, -1.8713815212249756, -0.10492508113384247, -0.09909850358963013, 0.3482872247695923, -0.07464049756526947, 0.4374319612979889, -0.7929211258888245, -0.3391425609588623, -0.13422773778438568, -0.0672822818160057, 0.2920726537704468, -0.05754445120692253, -1.2219969034194946, -0.2926221191883087, -0.22781157493591309, 0.40224793553352356, -0.7551442980766296, 1.0497580766677856, 0.005244635045528412, -0.0030370664317160845, 0.16155096888542175, 0.2682890295982361, -0.2652149796485901, -0.27346742153167725, -0.4634535610675812, -1.0009232759475708, 1.005566120147705, 0.39544472098350525, 1.0242931842803955, -0.4898809492588043, -0.9381261467933655, 0.34965771436691284, -0.6967099905014038, -0.12875884771347046, -0.22803851962089539, 0.3834150731563568, -0.21350537240505219, 0.1838126927614212, 0.06883322447538376, -0.04250992089509964, -0.39506056904792786, -0.15965941548347473, 0.07047080993652344, 0.1201125979423523, 0.06126087158918381, 0.32459256052970886, -0.452644407749176, 0.20044977962970734, 0.16046318411827087, -0.21332760155200958, -0.1998298466205597, 0.5367376804351807, 0.09318182617425919, -0.8393901586532593, -0.2810339033603668, 0.5747033357620239, 0.6644934415817261, 0.04170234873890877, 0.336879163980484, -0.34057584404945374, -0.3704240620136261, 0.0024997820146381855, -1.0082918405532837, 0.8710012435913086, -0.1571231633424759, -0.4556812345981598, -0.21280896663665771, -0.4932481050491333, 0.4311237931251526, 0.049196865409612656, 0.3037433922290802, -1.0146925449371338, 0.7799930572509766, 0.6570270657539368, -0.7859178185462952, -0.18340669572353363, 0.6168526411056519, 1.1231181621551514, -0.2846488356590271, 0.5581399202346802, 0.6756588220596313, -0.46610790491104126, 0.6958323121070862, 0.20657584071159363, 0.39197322726249695, -0.3165680468082428, 0.33524090051651, -0.3056643009185791, 0.7042304873466492, 0.24442507326602936, 0.008518802002072334, 0.288585364818573, 0.16284070909023285, 0.858361005783081, 0.19144099950790405, -1.2624181509017944, -0.037799105048179626, -0.0023896454367786646, 0.77846360206604, 1.2193316221237183, 0.26550358533859253, -0.1770155131816864, 0.006025222595781088, -0.8594495058059692, -0.16901902854442596, 0.007788347080349922, -0.6448115110397339, -0.31591758131980896, -0.31297898292541504, -1.4481053352355957, 0.16425585746765137, 0.011061173863708973, 0.19237734377384186, -0.3325672149658203, -0.724130392074585, -1.2198646068572998, 0.11471040546894073, -0.01222110353410244, -0.005478207021951675, 0.5263603925704956, -0.5810300707817078, -0.5349240303039551, 0.41231027245521545, -0.5918983817100525, 0.4714488983154297, 0.10282082855701447, 0.738513708114624, -0.6921427845954895, 0.1393335461616516, -0.05609259754419327, -0.45178383588790894, -1.4659874439239502, 0.20799373090267181, 0.029385490342974663, 0.28213292360305786, -0.1643020361661911, 0.9335691928863525, 0.8906120657920837, 0.26664018630981445, 0.12573900818824768, -0.6400969624519348, -0.001235579140484333, 0.0360882543027401, 0.7196546792984009, 0.15065909922122955, 0.4518277943134308, 0.15930555760860443, -0.16482488811016083, 1.0377922058105469, 0.31053489446640015, -0.8222633600234985, -0.1857665479183197, -0.6776220202445984, -0.8344693183898926, 0.4192870557308197, -0.010961598716676235, -0.795272946357727, 0.007278094068169594, 0.696667492389679, 0.4859824478626251, 0.4777675271034241, 0.8430055379867554, 0.8022412061691284, -0.16235895454883575, 0.4431140422821045, 0.071391761302948, 1.087607741355896, -0.3048586845397949, -0.4274592995643616, 0.5466129779815674, -0.2302541881799698, 0.41490235924720764, -0.22692106664180756, 0.2999575138092041, 0.20673495531082153, -0.6254939436912537, -0.11256197839975357, -0.4059295356273651, 0.19201123714447021, 0.1265171319246292, -0.5489997863769531, -0.8510861396789551, -1.040331244468689, 0.31215935945510864, 0.025914959609508514, 0.8363617658615112, -0.3878267705440521, 0.18815350532531738, 0.14233988523483276, -1.0056426525115967, -0.8841556310653687, -0.6611186861991882, -0.9111444354057312, -0.8801379203796387, 0.061796434223651886, 0.422416627407074, -0.47923529148101807, -0.00571706797927618, 0.4982750117778778, -0.06332475692033768, 0.6751883029937744, -0.2542901635169983, -0.1517026275396347, -0.854750394821167, 0.9597309231758118, -0.5756388902664185, 0.7430092692375183, 0.07554315775632858, 0.44163593649864197, 1.095234990119934, 0.2994571626186371, 0.08294972777366638, 0.5552013516426086, -0.3200755715370178, -0.1711519956588745, 0.4156184792518616, 0.25915467739105225, 0.0993267372250557, -0.01965385302901268, -0.20838385820388794, 1.1865296363830566, -0.32572507858276367, -0.45908546447753906, 0.7615294456481934, 0.4010772109031677, 0.7217048406600952, 0.7594004273414612, 1.044451117515564, 0.0793721154332161, 0.952362060546875, -0.06405190378427505, -0.345255583524704, 0.454588383436203, 0.8812165260314941, 0.5359677672386169, 1.15659761428833, 0.22921474277973175, -0.093685083091259, -0.6701403260231018, 0.4637799561023712, -0.9382018446922302, -0.20667444169521332, 0.09269548207521439, 0.3957318067550659, 0.07771101593971252, -0.5355176329612732, 0.251897931098938, 0.4990803599357605, -0.10716993361711502, -0.529806911945343, 0.10890507698059082, -1.3111870288848877, -0.1485864371061325, 0.39897507429122925, 0.50030916929245, 0.40407595038414, -0.5769801139831543, 0.2540203332901001, 15.184748649597168, 0.623690128326416, -0.14524716138839722, 0.04153072461485863, 0.5596747994422913, -0.5648138523101807, -0.4769441485404968, -0.4155512750148773, -0.6783639192581177, 0.11732592433691025, 0.7016794681549072, -0.23731695115566254, 0.2536686658859253, 0.6033225059509277, 0.2919902205467224, -0.82491534948349, 0.27978721261024475, -0.2571471333503723, 0.4648433327674866, -0.37358686327934265, -0.2195788472890854, -0.08784682303667068, 0.9047696590423584, 0.6278052926063538, 0.5918797850608826, 0.16823922097682953, 0.14673081040382385, 0.1420036405324936, 0.24015073478221893, -0.8791046738624573, -0.4429352581501007, -0.992135763168335, 1.0523937940597534, -0.4368951916694641, -0.5274544954299927, -0.8306553959846497, -0.18565575778484344, -1.4878066778182983, 0.02959563210606575, 0.5025684237480164, -0.8099792003631592, 0.18822556734085083, 0.6375670433044434, 0.3386918604373932, -0.7175145745277405, 0.242116779088974, 0.03915484994649887, 0.02659970335662365, -0.4953235387802124, -0.7054213881492615, -0.2885296046733856, 0.09987922757863998, 0.2524774670600891, -0.08961683511734009, 0.26285311579704285, -0.5191953778266907, 0.10322518646717072, -0.5097911953926086, 0.1038050726056099, 0.629665195941925, 0.2959538400173187, -0.5600887537002563, -0.6030039191246033, 1.2956844568252563, -0.41305282711982727, -0.17481186985969543, -0.605557382106781, 0.07689307630062103, 0.19733572006225586, -0.09908787161111832, -0.3568224310874939, -0.36858806014060974, 0.29365769028663635, -0.12361705303192139, 0.1470678150653839, 0.32503262162208557, -0.9496797919273376, -0.5711321234703064, -0.4775037169456482, -0.6558024883270264, 0.5055302977561951, -0.2995559275150299, -0.6519201397895813, 0.6557225584983826, -0.5086734294891357, -1.0060826539993286, 0.6648241281509399, -1.1095480918884277, -0.020507851615548134, 0.6579641699790955, -0.7389246225357056, -0.28130286931991577, -0.060927730053663254, -0.5385093092918396, -0.12119122594594955, -0.4144631326198578, 0.6166279911994934, -0.8743922710418701, -0.6592385768890381, 0.2402302324771881, 0.17413395643234253, -0.9589924812316895, 0.18303550779819489, -0.8584808707237244, 0.19935789704322815, 0.1571093648672104, -0.44462060928344727, 0.07030948251485825, 0.7321631908416748, -0.3551073968410492, -1.1687064170837402, 0.0778537467122078, 0.6208724975585938, -0.3621339797973633, -0.40039563179016113, -0.3894449770450592, -0.2384892702102661, -0.5994986295700073, 0.508179783821106, -0.3909750282764435, 0.5130345225334167, 0.11012934148311615, -0.08110926300287247, -0.3961661458015442, -1.5376707315444946, 0.024657465517520905, -0.23766088485717773, 0.10345127433538437, -0.21354521811008453, 0.6299826502799988, -0.23466654121875763, -0.25760504603385925, -0.4739365875720978, 0.43375036120414734, 0.6652050614356995, -0.6753748655319214, 0.47832563519477844, -0.5073631405830383, 0.3663320243358612, 0.007861409336328506, -0.28543055057525635, -0.5949401259422302, -0.10608617961406708, -0.19684192538261414, 0.4857690632343292, -0.3725261092185974, 1.081912636756897, -0.710512638092041, 0.8030679821968079, 0.546542763710022, 0.5535110235214233, -0.5993115901947021, -0.25158458948135376, 0.13275933265686035, -0.24479031562805176, -0.08031395822763443, 0.15475332736968994, -0.13593268394470215, 0.5827769637107849, 0.26730167865753174, 0.3110167682170868, 0.30712610483169556, -0.560250461101532, -0.29656627774238586, -0.04331788420677185, -0.395649254322052, 0.2176913022994995, -0.6732796430587769, -0.34198522567749023, -0.03464021906256676, -0.5662170648574829, 0.08771767467260361, -0.4200671315193176, -0.6521807312965393, 0.05141323432326317, 0.620902955532074, -0.5309439301490784, 0.09962845593690872, -0.002119716489687562, 0.22209954261779785, -0.720771849155426, -0.38269558548927307, -0.7488968968391418, 0.3920268714427948, 0.7401378154754639, -0.3354337811470032, -0.4790956676006317, 0.2548377215862274, -0.19453002512454987, 0.061449792236089706, 0.946142852306366, -0.8581387996673584, -0.6866007447242737, -0.47574907541275024, 1.0095454454421997, -0.5777801871299744, -1.0036073923110962, -0.44105780124664307, 0.5918662548065186, -0.24065160751342773, 0.17083564400672913, -0.18095700442790985, 0.14464326202869415, -0.6539610028266907, -0.08551544696092606, 0.5403627753257751, -0.08029536157846451, 0.1775907725095749, -0.2528037428855896, -0.6681759357452393, -0.6787017583847046, 0.1267126202583313, -0.1537720263004303, -0.7023805975914001, 0.008006996475160122, 0.35393837094306946, -1.369494080543518, -0.39282143115997314, 0.5861282348632812, -0.7040674686431885, -0.40393030643463135, 0.3421228229999542, 0.14397625625133514, 0.028745528310537338, 0.5123543739318848, 0.8698518872261047, 0.03331417590379715, -0.6388339400291443, 0.06623102724552155, 0.5162544250488281, -0.004740930162370205, -0.416860967874527, -0.1394331008195877, 0.49640747904777527, -0.5269367098808289, 0.19665445387363434, -0.5269008278846741, -0.26955729722976685, -1.243307113647461, -0.2522508203983307, 0.14858323335647583, 0.010718184523284435, 0.7155003547668457, 1.112374186515808, -0.8778393268585205, -0.9911282658576965, -0.22133339941501617, -0.3810962438583374, -0.857205867767334, -0.12606003880500793, 0.6563152074813843, 0.8268463015556335, 0.18134623765945435, 0.10006292909383774, -0.3608367443084717, 0.30740389227867126, -0.3749387562274933, -0.13927623629570007, 0.5469545125961304, -0.08857815712690353, -0.25391170382499695, 0.03937435522675514, 0.7184960842132568, -0.20871110260486603, -0.06477753818035126, 0.651567816734314, -0.25054651498794556, -0.8574911952018738, 0.24265533685684204, -1.1714677810668945, -0.844276487827301, -0.15853659808635712, 0.80281662940979, 0.6708276271820068, 0.39063191413879395, -0.6513874530792236, 0.026228679344058037, 0.14568576216697693, 0.7197487950325012, -1.30228853225708, -0.05342103913426399, 0.9985945224761963, 0.892858624458313, -0.9830285310745239, 0.7537149786949158, -0.5219562649726868, -1.11735200881958, 1.1952931880950928, 0.3952510356903076, -0.4562905728816986, 0.7584231495857239, 0.12313797324895859, 0.5821670293807983, -0.15455150604248047, -0.7805100083351135, 0.1901000440120697, 0.500698447227478, 0.9232311844825745, 0.3138546943664551, -0.00820962805300951, -0.619276762008667, 0.8994225263595581, -0.08693524450063705, 0.7638923525810242, 1.1333062648773193, 1.2288531064987183, -0.03447146713733673, -0.1714947372674942, 0.04035032540559769, 0.9217033982276917, -0.700283944606781, 0.07289306819438934, -0.8279561996459961, 0.3664332330226898, -0.4109475612640381, 1.0197302103042603, 0.5692839622497559, -0.45134007930755615, 0.35880279541015625, -0.7208195924758911, 0.2107236236333847, -0.3521168828010559, -1.2922613620758057, 0.4884018301963806, 0.1401420682668686, -0.6715192198753357, -0.5528266429901123, -0.460368812084198, -0.3252873122692108, -0.2589109241962433, -0.6012892723083496, 0.42524078488349915, 0.9216310977935791, 0.4731610417366028, 0.890544593334198, 0.02334381453692913, 0.31475314497947693, -0.16897311806678772, 0.00010661341366358101, -0.9679120779037476, -0.6793174147605896, -0.2561861574649811, -0.5893484354019165, -0.07517095655202866, -0.460666686296463, -0.4896807372570038]"^^xsd:string ] ;
+    frbr:realization :Journal_Article_127fb1516 ;
+    po:contains :back_matter_72b08ddb4,
+        :body_matter_72b08ddb4 .
+
+:Journal_999d475a1 a fabio:Journal ;
+    frbr:part :Journal_Volume_c81ac792f .
+
+:Journal_Article_127fb1516 a fabio:JournalArticle ;
+    prism:endingPage 66 ;
+    prism:pageCount 13 ;
+    prism:startingPage 53 ;
+    datacite:doi "10.12694/scpe.v22i1.1839"^^xsd:anyURI ;
+    fabio:hasURL "https://www.scpe.org/index.php/scpe/article/view/1839"^^xsd:anyURI ;
+    frbr:partOf :Journal_Issue_826957961 ;
+    owl:sameAs <https://www.scpe.org/index.php/scpe/article/view/1839> .
+
+:ListOfFigures_72b08ddb4 a doco:ListOfFigures ;
+    po:contains :figure_0_72b08ddb4,
+        :figure_1_72b08ddb4,
+        :figure_2_72b08ddb4,
+        :figure_3_72b08ddb4,
+        :figure_4_72b08ddb4,
+        :figure_5_72b08ddb4,
+        :figure_6_72b08ddb4 .
+
+:ListOfTables_72b08ddb4 a doco:ListOfTables ;
+    po:contains :table_0_72b08ddb4,
+        :table_1_72b08ddb4,
+        :table_2_72b08ddb4,
+        :table_3_72b08ddb4,
+        :table_4_72b08ddb4,
+        :table_5_72b08ddb4 .
+
+:author_abf59c744 a schema:Person ;
+    pro:holdsRoleInTime :role_4356e2ba8 ;
+    schema:familyName "Meena"^^xsd:string ;
+    schema:givenName "M. Janaki"^^xsd:string ;
+    schema:name "M. Janaki Meena"^^xsd:string .
+
+:author_fc9c9f8b3 a schema:Person ;
+    pro:holdsRoleInTime :role_d2da7c245 ;
+    schema:familyName "Daniel"^^xsd:string ;
+    schema:givenName "D. Anand Joseph"^^xsd:string ;
+    schema:name "D. Anand Joseph Daniel"^^xsd:string .
+
+:back_matter_72b08ddb4 a doco:BackMatter ;
+    co:firstItem [ co:itemContent :bibliography_72b08ddb4 ] ;
+    po:contains :ListOfFigures_72b08ddb4,
+        :ListOfTables_72b08ddb4,
+        :bibliography_72b08ddb4 .
+
+:body_matter_72b08ddb4 a doco:BodyMatter ;
+    co:firstItem [ co:itemContent :section1_72b08ddb4 ;
+            co:nextItem [ co:itemContent :section2_72b08ddb4 ;
+                    co:nextItem [ co:itemContent :section8_72b08ddb4 ] ] ] ;
+    po:contains :section1_72b08ddb4,
+        :section2_72b08ddb4,
+        :section8_72b08ddb4 .
+
+:figure_0_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_0_72b08ddb4,
+        :figure_description_0_72b08ddb4,
+        :figure_label_0_72b08ddb4 .
+
+:figure_1_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_1_72b08ddb4,
+        :figure_description_1_72b08ddb4,
+        :figure_label_1_72b08ddb4 .
+
+:figure_2_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_2_72b08ddb4,
+        :figure_description_2_72b08ddb4,
+        :figure_label_2_72b08ddb4 .
+
+:figure_3_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_3_72b08ddb4,
+        :figure_description_3_72b08ddb4,
+        :figure_label_3_72b08ddb4 .
+
+:figure_4_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_4_72b08ddb4,
+        :figure_description_4_72b08ddb4,
+        :figure_label_4_72b08ddb4 .
+
+:figure_5_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_5_72b08ddb4,
+        :figure_description_5_72b08ddb4,
+        :figure_label_5_72b08ddb4 .
+
+:figure_6_72b08ddb4 a doco:Figure ;
+    po:contains :figure_box_6_72b08ddb4,
+        :figure_description_6_72b08ddb4,
+        :figure_label_6_72b08ddb4 .
+
+:figure_box_0_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[75.6, 680.91, 462.07, 9.96], [57.6, 692.86, 480.07, 9.96], [57.6, 704.82, 411.22, 9.96]]" ;
+    schema:pagination 3 .
+
+:figure_box_1_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[165.41, 341.26, 264.45, 9.96], [161.24, 93.4, 273.0, 237.0]]" ;
+    schema:pagination 4 .
+
+:figure_box_2_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[165.41, 402.4, 264.45, 9.96], [198.42, 93.64, 198.4, 297.9]]" ;
+    schema:pagination 5 .
+
+:figure_box_3_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[481.78, 405.67, 7.75, 9.96], [232.33, 422.54, 24.06, 9.96], [232.33, 429.02, 40.1, 9.96], [272.43, 422.54, 22.23, 9.96], [272.43, 429.02, 38.89, 9.96], [311.33, 433.14, 13.39, 6.19], [325.22, 429.02, 2.76, 9.96], [327.99, 422.54, 32.2, 9.96], [327.99, 429.02, 10.27, 9.96], [338.26, 433.14, 4.1, 6.19], [342.86, 429.02, 20.08, 9.96], [57.6, 429.02, 20.48, 9.96], [57.6, 451.14, 192.84, 9.96], [250.44, 455.27, 13.39, 6.19], [264.33, 451.14, 273.34, 9.96], [57.6, 464.1, 3.87, 9.96], [61.48, 458.28, 9.97, 9.96], [62.72, 464.1, 191.95, 9.96]]" ;
+    schema:pagination 6 .
+
+:figure_box_4_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[69.89, 566.42, 8.19, 9.96], [57.6, 589.55, 20.22, 9.96], [81.38, 583.73, 9.97, 9.96], [82.45, 589.55, 163.05, 9.96], [249.07, 583.73, 9.97, 9.96], [250.16, 589.55, 244.62, 9.96], [494.78, 593.88, 3.97, 4.77], [499.25, 589.55, 8.72, 9.96], [507.99, 593.88, 3.97, 4.77], [512.46, 589.55, 20.74, 9.96], [533.2, 593.88, 3.97, 4.77], [57.6, 602.5, 235.95, 9.96], [297.89, 596.69, 10.76, 9.96], [297.89, 602.5, 156.16, 9.96], [458.4, 596.69, 10.76, 9.96], [458.4, 602.5, 79.28, 9.96], [57.6, 614.45, 76.58, 9.96], [230.13, 630.77, 10.76, 9.96], [230.13, 636.58, 34.86, 9.96], [264.99, 640.71, 14.81, 6.19], [282.52, 636.58, 14.27, 9.96], [296.79, 640.92, 3.97, 4.77], [301.26, 636.58, 9.16, 9.96], [310.42, 640.71, 15.9, 6.19], [329.04, 636.58, 16.36, 9.96], [345.4, 640.71, 14.81, 6.19], [360.71, 636.58, 4.42, 9.96], [57.6, 636.58, 20.48, 9.96]]" ;
+    schema:pagination 6 .
+
+:figure_box_5_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[215.73, 633.69, 199.61, 9.96], [93.6, 633.69, 20.48, 9.96], [75.6, 657.0, 462.07, 9.96], [57.6, 668.95, 480.08, 9.96], [57.6, 680.91, 480.07, 9.96], [57.6, 692.86, 480.08, 9.96], [57.6, 704.82, 90.55, 9.96]]" ;
+    schema:pagination 8 .
+
+:figure_box_6_72b08ddb4 a doco:FigureBox ;
+    c4o:hasContent "[[116.15, 274.4, 362.97, 9.96], [155.91, 97.43, 283.4, 166.12]]" ;
+    schema:pagination 11 .
+
+:figure_description_0_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "Hybrid SA with Optimized Feature Selection Approach. This hybrid method includes lexiconbased dictionary for training the ML classifier and bag-of-words as features for testing the ML classifier with TSA based feature selection. A complete framework of proposed work is displayed in Fig.3.1." .
+
+:figure_description_1_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3.1: Block diagram of proposed hybrid SA methodology" .
+
+:figure_description_2_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3.2: Block diagram of proposed hybrid SA methodology" .
+
+:figure_description_3_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "− −− → (P D) = | − −− → (F S) − r and . − −−−− → (P p (x))| (3.2) where x represents the present iteration, (r and ) represents a random number in the range between 0 and 1. ( − → A ) is calculated using Eqs. 3.3, 3.4 and 3.5." .
+
+:figure_description_4_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "represents the force of gravity and − → F represents water flow advection in deep ocean [17]. c 1 , c 2 andc 3 are random number variables between the range [0, 1]. − → M shows the tunicates social forces. − → M is calculated as shown in Eq. 3.6. − → M = ⌊P min + c 1 .P max − P min ⌋ (3.6)" .
+
+:figure_description_5_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "precision * recall/precision + recall (4.4) Parameter Settings. The experiments are performed on a HP laptop with Windows 10 operating system, Intel Core i3 processor having 2.3 GHz frequency, 4GB of RAM. The software used for evaluation of the proposed framework is MATLAB R2020a. The model parameters used to validate the performance of various optimization techniques in SA oriented feature selection domain and general feature selection domain is given in Table 5.1." .
+
+:figure_description_6_72b08ddb4 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 6.1: Features size comparison for various datasets with TSA and without TSA" .
+
+:figure_label_0_72b08ddb4 a doco:Label ;
+    c4o:hasContent "3. 1 ." .
+
+:figure_label_1_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Fig. 3 . 1 :" .
+
+:figure_label_2_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Fig. 3 . 2 :" .
+
+:figure_label_3_72b08ddb4 a doco:Label ;
+    c4o:hasContent "2 ." .
+
+:figure_label_4_72b08ddb4 a doco:Label ;
+    c4o:hasContent "None" .
+
+:figure_label_5_72b08ddb4 a doco:Label ;
+    c4o:hasContent "F 1 = 2 * 5 ." .
+
+:figure_label_6_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Fig. 6 . 1 :" .
+
+:org_32d42394d a frapo:Organization ;
+    schema:name "School of Computer Science and Engineering, Vellore Institute of Technology, Chennai Campus, India."^^xsd:string .
+
+:org_808ef3469 a frapo:Organization ;
+    schema:name "School of Computer Science and Engineering, Vellore Institute of Technology, Chennai Campus, India"^^xsd:string .
+
+:referenceToBIBREF10_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF10_72b08ddb4 ;
+    c4o:hasContent "[11]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF11_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF11_72b08ddb4 ;
+    c4o:hasContent "[12]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF12_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF12_72b08ddb4 ;
+    c4o:hasContent "[13]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF13_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF13_72b08ddb4 ;
+    c4o:hasContent "[14]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF14_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF14_72b08ddb4 ;
+    c4o:hasContent "[15]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF15_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF15_72b08ddb4 ;
+    c4o:hasContent "[16]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF16_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF16_72b08ddb4 ;
+    c4o:hasContent "[17]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF18_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF18_72b08ddb4 ;
+    c4o:hasContent "[19]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF19_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF19_72b08ddb4 ;
+    c4o:hasContent "[20]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF1_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF1_72b08ddb4 ;
+    c4o:hasContent "[2]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF20_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF20_72b08ddb4 ;
+    c4o:hasContent "[21]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF21_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF21_72b08ddb4 ;
+    c4o:hasContent "[22]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF22_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF22_72b08ddb4 ;
+    c4o:hasContent "[23]" ;
+    schema:pagination 2,
+        3 .
+
+:referenceToBIBREF23_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF23_72b08ddb4 ;
+    c4o:hasContent "[24]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF24_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF24_72b08ddb4 ;
+    c4o:hasContent "[25]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF25_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF25_72b08ddb4 ;
+    c4o:hasContent "[26]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF26_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF26_72b08ddb4 ;
+    c4o:hasContent "[27]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF28_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF28_72b08ddb4 ;
+    c4o:hasContent "[29]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF29_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF29_72b08ddb4 ;
+    c4o:hasContent "[30]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF2_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF2_72b08ddb4 ;
+    c4o:hasContent "[3]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF30_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF30_72b08ddb4 ;
+    c4o:hasContent "[31]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF31_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF31_72b08ddb4 ;
+    c4o:hasContent "[32]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF32_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF32_72b08ddb4 ;
+    c4o:hasContent "[33]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF33_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF33_72b08ddb4 ;
+    c4o:hasContent "[34]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF34_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF34_72b08ddb4 ;
+    c4o:hasContent "[35]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF35_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF35_72b08ddb4 ;
+    c4o:hasContent "[36]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF36_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF36_72b08ddb4 ;
+    c4o:hasContent "[37]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF3_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF3_72b08ddb4 ;
+    c4o:hasContent "[4]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF5_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF5_72b08ddb4 ;
+    c4o:hasContent "[6]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF6_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF6_72b08ddb4 ;
+    c4o:hasContent "[7]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF7_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF7_72b08ddb4 ;
+    c4o:hasContent "[8]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF8_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF8_72b08ddb4 ;
+    c4o:hasContent "[9]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF9_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF9_72b08ddb4 ;
+    c4o:hasContent "[10]" ;
+    schema:pagination 2 .
+
+:reference_41_72b08ddb4 a deo:Reference ;
+    c4o:hasContent "Figure 3" ;
+    schema:pagination 5 .
+
+:reference_42_72b08ddb4 a deo:Reference ;
+    dcterms:references :table_1_72b08ddb4 ;
+    c4o:hasContent "Table 6" ;
+    schema:pagination 9 .
+
+:reference_43_72b08ddb4 a deo:Reference ;
+    dcterms:references :table_1_72b08ddb4 ;
+    c4o:hasContent "Table 6" ;
+    schema:pagination 9 .
+
+:reference_44_72b08ddb4 a deo:Reference ;
+    dcterms:references :table_1_72b08ddb4 ;
+    c4o:hasContent "Table 6" ;
+    schema:pagination 9 .
+
+:reference_45_72b08ddb4 a deo:Reference ;
+    c4o:hasContent "Table 4" ;
+    schema:pagination 9 .
+
+:reference_46_72b08ddb4 a deo:Reference ;
+    dcterms:references :table_1_72b08ddb4 ;
+    c4o:hasContent "Table 6" ;
+    schema:pagination 9 .
+
+:reference_47_72b08ddb4 a deo:Reference ;
+    dcterms:references :table_0_72b08ddb4 ;
+    c4o:hasContent "Table 5" ;
+    schema:pagination 9 .
+
+:reference_48_72b08ddb4 a deo:Reference ;
+    c4o:hasContent "Table 3, 4" ;
+    schema:pagination 10 .
+
+:role_4356e2ba8 a pro:RoleInTime ;
+    pro:relatesToOrganization :org_808ef3469 ;
+    pro:withRole pro:author .
+
+:role_d2da7c245 a pro:RoleInTime ;
+    pro:relatesToOrganization :org_32d42394d ;
+    pro:withRole pro:author .
+
+:sectionLabel10_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "6.1." .
+
+:sectionLabel11_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "6.2." .
+
+:sectionLabel1_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "1." .
+
+:sectionLabel2_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "2." .
+
+:sectionLabel3_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "2.1." .
+
+:sectionLabel4_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "2.2." .
+
+:sectionLabel5_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "3.2." .
+
+:sectionLabel6_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "3.2.1." .
+
+:sectionLabel7_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "3.2.2." .
+
+:sectionLabel9_72b08ddb4 a doco:SectionLabel ;
+    c4o:hasContent "4.3." .
+
+:sectionTitle10_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Performance Comparison of ML classifiers." .
+
+:sectionTitle11_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Comparison of three different SA approaches." .
+
+:sectionTitle1_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Introduction." .
+
+:sectionTitle2_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Related Works" .
+
+:sectionTitle3_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Hybrid Sentiment Analysis." .
+
+:sectionTitle4_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Optimized Feature Selection in SA." .
+
+:sectionTitle5_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Feature Selection using TSA" .
+
+:sectionTitle6_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Problem formulation." .
+
+:sectionTitle7_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Mathematical model and optimization." .
+
+:sectionTitle8_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Algorithm 1: Fitness calculation" .
+
+:sectionTitle9_72b08ddb4 a doco:SectionTitle ;
+    c4o:hasContent "Performance Metrics." .
+
+:table_2_72b08ddb4 a doco:Table ;
+    po:contains :table_box_2_72b08ddb4,
+        :table_description_2_72b08ddb4,
+        :table_label_2_72b08ddb4 .
+
+:table_3_72b08ddb4 a doco:Table ;
+    po:contains :table_box_3_72b08ddb4,
+        :table_description_3_72b08ddb4,
+        :table_label_3_72b08ddb4 .
+
+:table_4_72b08ddb4 a doco:Table ;
+    po:contains :table_box_4_72b08ddb4,
+        :table_description_4_72b08ddb4,
+        :table_label_4_72b08ddb4 .
+
+:table_5_72b08ddb4 a doco:Table ;
+    po:contains :table_box_5_72b08ddb4,
+        :table_description_5_72b08ddb4,
+        :table_label_5_72b08ddb4 .
+
+:table_box_0_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[200.99, 104.46, 193.3, 105.56]]" ;
+    schema:pagination 8 .
+
+:table_box_1_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[104.51, 104.46, 386.26, 188.74]]" ;
+    schema:pagination 9 .
+
+:table_box_2_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[115.4, 104.46, 364.49, 81.69]]" ;
+    schema:pagination 10 .
+
+:table_box_3_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[57.6, 211.51, 480.07, 164.44]]" ;
+    schema:pagination 10 .
+
+:table_box_4_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[134.95, 553.42, 325.39, 9.96]]" ;
+    schema:pagination 11 .
+
+:table_box_5_72b08ddb4 a doco:TableBox ;
+    c4o:hasContent "[[138.46, 575.74, 318.34, 131.11]]" ;
+    schema:pagination 11 .
+
+:table_description_0_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "None" .
+
+:table_description_1_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "1: Performance measures comparison of different classifiers in sentiment analysis" .
+
+:table_description_2_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "3: Performance measures comparison of ML approach with LSVM classifier" .
+
+:table_description_3_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "4: Performance measures comparison of proposed hybrid model with TSA and without TSA on Amazon data The precision rate of all datasets achieved above 90% except Camera dataset for both TSA and non-TSA optimization. The Recall and F1 score is more than 90% for all datasets with TSA optimization." .
+
+:table_description_4_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "None" .
+
+:table_description_5_72b08ddb4 a doco:TableLabel ;
+    c4o:hasContent "None" .
+
+:table_label_0_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Table 5 ." .
+
+:table_label_1_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Table 6 ." .
+
+:table_label_2_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Table 6 ." .
+
+:table_label_3_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Table 6 ." .
+
+:table_label_4_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Table 6 . 5" .
+
+:table_label_5_72b08ddb4 a doco:Label ;
+    c4o:hasContent "Performance measures Techni ques Accur acy Preci sion Recall F1 score Com- putation time Feature size re- duction (%)" .
+
+:BIBREF37_72b08ddb4 prism:endingPage "45" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "36" ;
+    prism:volume "52" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Qi" ;
+            schema:givenName "Yong" ],
+        [ a schema:Person ;
+            schema:familyName "Yu" ;
+            schema:givenName "Jianfei" ],
+        [ a schema:Person ;
+            schema:familyName "Xu" ;
+            schema:givenName "Feng" ],
+        [ a schema:Person ;
+            schema:familyName "Xia" ;
+            schema:givenName "Rui" ],
+        [ a schema:Person ;
+            schema:familyName "Cambria" ;
+            schema:givenName "Erik" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Information Processing & Management" ] ;
+    dcterms:title "Polarity shift detection, elimination and ensemble: A three-stage model for document-level sentiment analysis" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.ipm.2015.04.003"^^xsd:anyURI .
+
+:BIBREF38_72b08ddb4 dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "Amazon Reviews, business analytics with sentiment analysis" ] .
+
+:BIBREF39_72b08ddb4 prism:endingPage "230" ;
+    prism:issueIdentifier "4" ;
+    prism:startingPage "225" ;
+    prism:volume "36" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Deshpande" ;
+            schema:givenName "Deepa" ],
+        [ a schema:Person ;
+            schema:familyName "Shaikh" ;
+            schema:givenName "Tahura" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "International Journal of Computer Trends and Technology" ] ;
+    dcterms:title "Feature Selection Methods in Sentiment Analysis and Sentiment Classification of Amazon Product Reviews" ;
+    datacite:doi "http://dx.doi.org/10.14445/22312803/ijctt-v36p139"^^xsd:anyURI .
+
+:BIBREF4_72b08ddb4 prism:endingPage "541" ;
+    prism:startingPage "527" ;
+    prism:volume "31" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Carro" ;
+            schema:givenName "Rosa" ],
+        [ a schema:Person ;
+            schema:familyName "Ortigosa" ;
+            schema:givenName "Alvaro" ],
+        [ a schema:Person ;
+            schema:familyName "Martín" ;
+            schema:givenName "José" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "Computers in Human Behavior" ] ;
+    dcterms:title "Sentiment analysis in Facebook and its application to e-learning" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.chb.2013.05.024"^^xsd:anyURI .
+
+:Journal_Issue_826957961 a fabio:JournalIssue ;
+    frbr:partOf :Journal_Volume_c81ac792f .
+
+:Journal_Volume_c81ac792f a fabio:JournalVolume ;
+    prism:volume 22 ;
+    frbr:part :Journal_Issue_826957961 ;
+    frbr:partOf :Journal_999d475a1 .
+
+:bibliography_72b08ddb4 a doco:Bibliography ;
+    co:firstItem [ co:itemContent :BIBREF0_72b08ddb4 ;
+            co:nextItem [ co:itemContent :BIBREF1_72b08ddb4 ;
+                    co:nextItem [ co:itemContent :BIBREF2_72b08ddb4 ;
+                            co:nextItem [ co:itemContent :BIBREF3_72b08ddb4 ;
+                                    co:nextItem [ co:itemContent :BIBREF4_72b08ddb4 ;
+                                            co:nextItem [ co:itemContent :BIBREF5_72b08ddb4 ;
+                                                    co:nextItem [ co:itemContent :BIBREF6_72b08ddb4 ;
+                                                            co:nextItem [ co:itemContent :BIBREF7_72b08ddb4 ;
+                                                                    co:nextItem [ co:itemContent :BIBREF8_72b08ddb4 ;
+                                                                            co:nextItem [ co:itemContent :BIBREF9_72b08ddb4 ;
+                                                                                    co:nextItem [ co:itemContent :BIBREF10_72b08ddb4 ;
+                                                                                            co:nextItem [ co:itemContent :BIBREF11_72b08ddb4 ;
+                                                                                                    co:nextItem [ co:itemContent :BIBREF12_72b08ddb4 ;
+                                                                                                            co:nextItem [ co:itemContent :BIBREF13_72b08ddb4 ;
+                                                                                                                    co:nextItem [ co:itemContent :BIBREF14_72b08ddb4 ;
+                                                                                                                            co:nextItem [ co:itemContent :BIBREF15_72b08ddb4 ;
+                                                                                                                                    co:nextItem [ co:itemContent :BIBREF16_72b08ddb4 ;
+                                                                                                                                            co:nextItem [ co:itemContent :BIBREF17_72b08ddb4 ;
+                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF18_72b08ddb4 ;
+                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF19_72b08ddb4 ;
+                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF20_72b08ddb4 ;
+                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF21_72b08ddb4 ;
+                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF22_72b08ddb4 ;
+                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF23_72b08ddb4 ;
+                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF24_72b08ddb4 ;
+                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF25_72b08ddb4 ;
+                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF26_72b08ddb4 ;
+                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF27_72b08ddb4 ;
+                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF28_72b08ddb4 ;
+                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF29_72b08ddb4 ;
+                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF30_72b08ddb4 ;
+                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF31_72b08ddb4 ;
+                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF32_72b08ddb4 ;
+                                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF33_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF34_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF35_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF36_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF37_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF38_72b08ddb4 ;
+                                                                                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF39_72b08ddb4 ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ;
+    po:contains :BIBREF0_72b08ddb4,
+        :BIBREF10_72b08ddb4,
+        :BIBREF11_72b08ddb4,
+        :BIBREF12_72b08ddb4,
+        :BIBREF13_72b08ddb4,
+        :BIBREF14_72b08ddb4,
+        :BIBREF15_72b08ddb4,
+        :BIBREF16_72b08ddb4,
+        :BIBREF17_72b08ddb4,
+        :BIBREF18_72b08ddb4,
+        :BIBREF19_72b08ddb4,
+        :BIBREF1_72b08ddb4,
+        :BIBREF20_72b08ddb4,
+        :BIBREF21_72b08ddb4,
+        :BIBREF22_72b08ddb4,
+        :BIBREF23_72b08ddb4,
+        :BIBREF24_72b08ddb4,
+        :BIBREF25_72b08ddb4,
+        :BIBREF26_72b08ddb4,
+        :BIBREF27_72b08ddb4,
+        :BIBREF28_72b08ddb4,
+        :BIBREF29_72b08ddb4,
+        :BIBREF2_72b08ddb4,
+        :BIBREF30_72b08ddb4,
+        :BIBREF31_72b08ddb4,
+        :BIBREF32_72b08ddb4,
+        :BIBREF33_72b08ddb4,
+        :BIBREF34_72b08ddb4,
+        :BIBREF35_72b08ddb4,
+        :BIBREF36_72b08ddb4,
+        :BIBREF37_72b08ddb4,
+        :BIBREF38_72b08ddb4,
+        :BIBREF39_72b08ddb4,
+        :BIBREF3_72b08ddb4,
+        :BIBREF4_72b08ddb4,
+        :BIBREF5_72b08ddb4,
+        :BIBREF6_72b08ddb4,
+        :BIBREF7_72b08ddb4,
+        :BIBREF8_72b08ddb4,
+        :BIBREF9_72b08ddb4 .
+
+:referenceToBIBREF0_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF0_72b08ddb4 ;
+    c4o:hasContent "[1]" ;
+    schema:pagination 1,
+        3 .
+
+:referenceToBIBREF17_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF17_72b08ddb4 ;
+    c4o:hasContent "[18]" ;
+    schema:pagination 2,
+        3 .
+
+:referenceToBIBREF27_72b08ddb4 a deo:Reference ;
+    dcterms:references :BIBREF27_72b08ddb4 ;
+    c4o:hasContent "[28]" ;
+    schema:pagination 1,
+        3 .
+
+:section10_72b08ddb4 a doco:Section ;
+    po:contains :reference_42_72b08ddb4,
+        :sectionLabel10_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle10_72b08ddb4 .
+
+:section11_72b08ddb4 a doco:Section ;
+    po:contains :reference_43_72b08ddb4,
+        :reference_44_72b08ddb4,
+        :reference_45_72b08ddb4,
+        :reference_46_72b08ddb4,
+        :reference_47_72b08ddb4,
+        :reference_48_72b08ddb4,
+        :sectionLabel11_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle11_72b08ddb4 .
+
+:section1_72b08ddb4 a doco:Section ;
+    po:contains :referenceToBIBREF0_72b08ddb4,
+        :referenceToBIBREF10_72b08ddb4,
+        :referenceToBIBREF11_72b08ddb4,
+        :referenceToBIBREF12_72b08ddb4,
+        :referenceToBIBREF13_72b08ddb4,
+        :referenceToBIBREF14_72b08ddb4,
+        :referenceToBIBREF15_72b08ddb4,
+        :referenceToBIBREF16_72b08ddb4,
+        :referenceToBIBREF17_72b08ddb4,
+        :referenceToBIBREF1_72b08ddb4,
+        :referenceToBIBREF27_72b08ddb4,
+        :referenceToBIBREF2_72b08ddb4,
+        :referenceToBIBREF3_72b08ddb4,
+        :referenceToBIBREF5_72b08ddb4,
+        :referenceToBIBREF6_72b08ddb4,
+        :referenceToBIBREF7_72b08ddb4,
+        :referenceToBIBREF8_72b08ddb4,
+        :referenceToBIBREF9_72b08ddb4,
+        :sectionLabel1_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle1_72b08ddb4 .
+
+:section2_72b08ddb4 a doco:Section ;
+    co:firstItem [ co:itemContent :section3_72b08ddb4 ;
+            co:nextItem [ co:itemContent :section4_72b08ddb4 ;
+                    co:nextItem [ co:itemContent :section5_72b08ddb4 ] ] ] ;
+    po:contains :section3_72b08ddb4,
+        :section4_72b08ddb4,
+        :section5_72b08ddb4,
+        :sectionLabel2_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle2_72b08ddb4 .
+
+:section3_72b08ddb4 a doco:Section ;
+    po:contains :referenceToBIBREF18_72b08ddb4,
+        :referenceToBIBREF19_72b08ddb4,
+        :referenceToBIBREF20_72b08ddb4,
+        :referenceToBIBREF21_72b08ddb4,
+        :referenceToBIBREF22_72b08ddb4,
+        :referenceToBIBREF23_72b08ddb4,
+        :referenceToBIBREF24_72b08ddb4,
+        :referenceToBIBREF25_72b08ddb4,
+        :referenceToBIBREF26_72b08ddb4,
+        :referenceToBIBREF27_72b08ddb4,
+        :referenceToBIBREF28_72b08ddb4,
+        :referenceToBIBREF29_72b08ddb4,
+        :referenceToBIBREF30_72b08ddb4,
+        :referenceToBIBREF31_72b08ddb4,
+        :referenceToBIBREF32_72b08ddb4,
+        :sectionLabel3_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle3_72b08ddb4 .
+
+:section4_72b08ddb4 a doco:Section ;
+    po:contains :referenceToBIBREF0_72b08ddb4,
+        :referenceToBIBREF17_72b08ddb4,
+        :referenceToBIBREF33_72b08ddb4,
+        :referenceToBIBREF34_72b08ddb4,
+        :referenceToBIBREF35_72b08ddb4,
+        :referenceToBIBREF36_72b08ddb4,
+        :sectionLabel4_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle4_72b08ddb4 .
+
+:section5_72b08ddb4 a doco:Section ;
+    co:firstItem [ co:itemContent :section6_72b08ddb4 ;
+            co:nextItem [ co:itemContent :section7_72b08ddb4 ] ] ;
+    po:contains :section6_72b08ddb4,
+        :section7_72b08ddb4,
+        :sectionLabel5_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle5_72b08ddb4 .
+
+:section6_72b08ddb4 a doco:Section ;
+    po:contains :sectionLabel6_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle6_72b08ddb4 .
+
+:section7_72b08ddb4 a doco:Section ;
+    po:contains :reference_41_72b08ddb4,
+        :sectionLabel7_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle7_72b08ddb4 .
+
+:section8_72b08ddb4 a doco:Section ;
+    co:firstItem [ co:itemContent :section9_72b08ddb4 ;
+            co:nextItem [ co:itemContent :section10_72b08ddb4 ;
+                    co:nextItem [ co:itemContent :section11_72b08ddb4 ] ] ] ;
+    po:contains :section10_72b08ddb4,
+        :section11_72b08ddb4,
+        :section9_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle8_72b08ddb4 .
+
+:section9_72b08ddb4 a doco:Section ;
+    po:contains :sectionLabel9_72b08ddb4 ;
+    po:containsAsHeader :sectionTitle9_72b08ddb4 .
+
+:table_0_72b08ddb4 a doco:Table ;
+    po:contains :table_box_0_72b08ddb4,
+        :table_description_0_72b08ddb4,
+        :table_label_0_72b08ddb4 .
+
+:BIBREF0_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "14652" ;
+    prism:startingPage "14637" ;
+    prism:volume "7" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Fung" ;
+            schema:givenName "Benjamin" ],
+        [ a schema:Person ;
+            schema:familyName "Aleem" ;
+            schema:givenName "Saiqa" ],
+        [ a schema:Person ;
+            schema:familyName "Iqbal" ;
+            schema:givenName "Farkhund" ],
+        [ a schema:Person ;
+            schema:familyName "Hung" ;
+            schema:givenName "Patrick" ],
+        [ a schema:Person ;
+            schema:familyName "Hashmi" ;
+            schema:givenName "Jahanzeb" ],
+        [ a schema:Person ;
+            schema:familyName "Khattak" ;
+            schema:givenName "Asad" ],
+        [ a schema:Person ;
+            schema:familyName "Batool" ;
+            schema:givenName "Rabia" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "IEEE Access" ] ;
+    dcterms:title "A Hybrid Framework for Sentiment Analysis Using Genetic Algorithm Based Feature Reduction" ;
+    datacite:doi "http://dx.doi.org/10.1109/access.2019.2892852"^^xsd:anyURI .
+
+:BIBREF10_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "146" ;
+    prism:startingPage "135" ;
+    prism:volume "5" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Joulin" ;
+            schema:givenName "Armand" ],
+        [ a schema:Person ;
+            schema:familyName "Bojanowski" ;
+            schema:givenName "Piotr" ],
+        [ a schema:Person ;
+            schema:familyName "Grave" ;
+            schema:givenName "Edouard" ],
+        [ a schema:Person ;
+            schema:familyName "Mikolov" ;
+            schema:givenName "Tomas" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Transactions of the Association for Computational Linguistics" ] ;
+    dcterms:title "Enriching Word Vectors with Subword Information" ;
+    datacite:doi "http://dx.doi.org/10.1162/tacl_a_00051"^^xsd:anyURI .
+
+:BIBREF11_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "9208" ;
+    prism:issueIdentifier "11" ;
+    prism:startingPage "9191" ;
+    prism:volume "44" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ahmad" ;
+            schema:givenName "Tanvir" ],
+        [ a schema:Person ;
+            schema:familyName "Doja" ;
+            schema:givenName "Mohammad" ],
+        [ a schema:Person ;
+            schema:familyName "Ansari" ;
+            schema:givenName "Gunjan" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Arabian Journal for Science and Engineering" ] ;
+    dcterms:title "Hybrid Filter–Wrapper Feature Selection Method for Sentiment Classification" ;
+    datacite:doi "http://dx.doi.org/10.1007/s13369-019-04064-6"^^xsd:anyURI .
+
+:BIBREF12_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "120" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "108" ;
+    prism:volume "14" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Gao" ;
+            schema:givenName "Chao" ],
+        [ a schema:Person ;
+            schema:familyName "Chen" ;
+            schema:givenName "Shi" ],
+        [ a schema:Person ;
+            schema:familyName "Tao" ;
+            schema:givenName "Li" ],
+        [ a schema:Person ;
+            schema:familyName "Liu" ;
+            schema:givenName "Yuxin" ],
+        [ a schema:Person ;
+            schema:familyName "Liang" ;
+            schema:givenName "Mingxin" ],
+        [ a schema:Person ;
+            schema:familyName "Lu" ;
+            schema:givenName "Yuxiao" ],
+        [ a schema:Person ;
+            schema:familyName "Zhang" ;
+            schema:givenName "Zili" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "IEEE/ACM Transactions on Computational Biology and Bioinformatics" ] ;
+    dcterms:title "Solving NP-Hard Problems with <italic>Physarum</italic>-Based Ant Colony System" ;
+    datacite:doi "http://dx.doi.org/10.1109/tcbb.2015.2462349"^^xsd:anyURI .
+
+:BIBREF13_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "103" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "79" ;
+    prism:volume "49" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Samad-Soltani" ;
+            schema:givenName "Taha" ],
+        [ a schema:Person ;
+            schema:familyName "Ghassemi" ;
+            schema:givenName "A" ],
+        [ a schema:Person ;
+            schema:familyName "Nabaei" ;
+            schema:givenName "Armin" ],
+        [ a schema:Person ;
+            schema:familyName "Safdari" ;
+            schema:givenName "Reza" ],
+        [ a schema:Person ;
+            schema:familyName "Zarrabi" ;
+            schema:givenName "Houman" ],
+        [ a schema:Person ;
+            schema:familyName "Hamian" ;
+            schema:givenName "Melika" ],
+        [ a schema:Person ;
+            schema:familyName "Parsaei" ;
+            schema:givenName "Mohammad" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "Artificial Intelligence Review" ] ;
+    dcterms:title "Topologies and performance of intelligent algorithms: a comprehensive review" ;
+    datacite:doi "http://dx.doi.org/10.1007/s10462-016-9517-3"^^xsd:anyURI .
+
+:BIBREF14_72b08ddb4 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Eberhart" ;
+            schema:givenName "R" ],
+        [ a schema:Person ;
+            schema:familyName "Kennedy" ;
+            schema:givenName "J" ] ;
+    dcterms:publisher [ schema:name "MHS'95. Proceedings of the Sixth International Symposium on Micro Machine and Human Science" ] ;
+    dcterms:title "A new optimizer using particle swarm theory" ;
+    datacite:doi "http://dx.doi.org/10.1109/mhs.1995.494215"^^xsd:anyURI .
+
+:BIBREF15_72b08ddb4 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1992 ;
+    dcterms:publisher [ schema:name "Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence" ] ;
+    dcterms:title "Adaptation in Natural and Artificial Systems" ;
+    datacite:doi "http://dx.doi.org/10.7551/mitpress/1090.001.0001"^^xsd:anyURI .
+
+:BIBREF16_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "400" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "361" ;
+    prism:volume "26" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Buyya" ;
+            schema:givenName "Rajkumar" ],
+        [ a schema:Person ;
+            schema:familyName "Chana" ;
+            schema:givenName "Inderveer" ],
+        [ a schema:Person ;
+            schema:familyName "Singh" ;
+            schema:givenName "Maninder" ],
+        [ a schema:Person ;
+            schema:familyName "Gill" ;
+            schema:givenName "Sukhpal" ],
+        [ a schema:Person ;
+            schema:familyName "Abraham" ;
+            schema:givenName "Ajith" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Journal of Network and Systems Management" ] ;
+    dcterms:title "BULLET: Particle Swarm Optimization Based Scheduling Technique for Provisioned Cloud Resources" ;
+    datacite:doi "http://dx.doi.org/10.1007/s10922-017-9419-y"^^xsd:anyURI .
+
+:BIBREF17_72b08ddb4 a deo:BibliographicReference ;
+    prism:volume "90" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Kaur" ;
+            schema:givenName "Satnam" ],
+        [ a schema:Person ;
+            schema:familyName "Dhiman" ;
+            schema:givenName "Gaurav" ],
+        [ a schema:Person ;
+            schema:familyName "Awasthi" ;
+            schema:givenName "Lalit" ],
+        [ a schema:Person ;
+            schema:familyName "Sangal" ;
+            schema:givenName "A" ] ;
+    dcterms:issued 2020 ;
+    dcterms:publisher [ schema:name "Engineering Applications of Artificial Intelligence" ] ;
+    dcterms:title "Tunicate Swarm Algorithm: A new bio-inspired based metaheuristic paradigm for global optimization" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.engappai.2020.103541"^^xsd:anyURI .
+
+:BIBREF18_72b08ddb4 a deo:BibliographicReference ;
+    prism:issueIdentifier "5" ;
+    prism:volume "17" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Osman" ;
+            schema:givenName "Nurul" ],
+        [ a schema:Person ;
+            schema:familyName "Omar" ;
+            schema:givenName "Nazlia" ],
+        [ a schema:Person ;
+            schema:familyName "Darwich" ;
+            schema:givenName "Mohammad" ],
+        [ a schema:Person ;
+            schema:familyName "Mohd Noah" ;
+            schema:givenName "Shahrul" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Journal of Digital Information Management" ] ;
+    dcterms:title "Corpus-Based Techniques for Sentiment Lexicon Generation: A Review" ;
+    datacite:doi "http://dx.doi.org/10.6025/jdim/2019/17/5/296-305"^^xsd:anyURI .
+
+:BIBREF19_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "225" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "216" ;
+    prism:volume "8" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Hutto" ;
+            schema:givenName "C" ],
+        [ a schema:Person ;
+            schema:familyName "Gilbert" ;
+            schema:givenName "Eric" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Proceedings of the International AAAI Conference on Web and Social Media" ] ;
+    dcterms:title "VADER: A Parsimonious Rule-Based Model for Sentiment Analysis of Social Media Text" ;
+    datacite:doi "http://dx.doi.org/10.1609/icwsm.v8i1.14550"^^xsd:anyURI .
+
+:BIBREF1_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "3605" ;
+    prism:startingPage "3594" ;
+    prism:volume "8" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Huahu" ;
+            schema:givenName "Xu" ],
+        [ a schema:Person ;
+            schema:familyName "Kausar" ;
+            schema:givenName "Samina" ],
+        [ a schema:Person ;
+            schema:familyName "Ahmad" ;
+            schema:givenName "Waqas" ],
+        [ a schema:Person ;
+            schema:familyName "Ahmad" ;
+            schema:givenName "Waqas" ],
+        [ a schema:Person ;
+            schema:familyName "Shabir" ;
+            schema:givenName "Muhammad" ] ;
+    dcterms:issued 2020 ;
+    dcterms:publisher [ schema:name "IEEE Access" ] ;
+    dcterms:title "A Sentiment Polarity Categorization Technique for Online Product Reviews" ;
+    datacite:doi "http://dx.doi.org/10.1109/access.2019.2963020"^^xsd:anyURI .
+
+:BIBREF20_72b08ddb4 a deo:BibliographicReference ;
+    prism:volume "162" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Borg" ;
+            schema:givenName "Anton" ],
+        [ a schema:Person ;
+            schema:familyName "Boldt" ;
+            schema:givenName "Martin" ] ;
+    dcterms:issued 2020 ;
+    dcterms:publisher [ schema:name "Expert Systems with Applications" ] ;
+    dcterms:title "Using VADER sentiment and SVM for predicting customer response sentiment" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.eswa.2020.113746"^^xsd:anyURI .
+
+:BIBREF21_72b08ddb4 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Saber" ;
+            schema:givenName "Nudrat" ],
+        [ a schema:Person ;
+            schema:familyName "Shah" ;
+            schema:givenName "Faisal" ],
+        [ a schema:Person ;
+            schema:familyName "Haque" ;
+            schema:givenName "Tanjim" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "2018 IEEE International Conference on Innovative Research and Development (ICIRD)" ] ;
+    dcterms:title "Sentiment analysis on large scale Amazon product reviews" ;
+    datacite:doi "http://dx.doi.org/10.1109/icird.2018.8376299"^^xsd:anyURI .
+
+:BIBREF22_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "71" ;
+    prism:startingPage "61" ;
+    prism:volume "71" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "Jongseo" ],
+        [ a schema:Person ;
+            schema:familyName "Kim" ;
+            schema:givenName "Songkuk" ],
+        [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "Jong-Seok" ],
+        [ a schema:Person ;
+            schema:familyName "Cho" ;
+            schema:givenName "Heeryon" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Knowledge-Based Systems" ] ;
+    dcterms:title "Data-driven integration of multiple sentiment dictionaries for lexicon-based sentiment classification of product reviews" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.knosys.2014.06.001"^^xsd:anyURI .
+
+:BIBREF23_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "1152" ;
+    prism:issueIdentifier "6" ;
+    prism:startingPage "1138" ;
+    prism:volume "181" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Li" ;
+            schema:givenName "Shoushan" ],
+        [ a schema:Person ;
+            schema:familyName "Zong" ;
+            schema:givenName "Chengqing" ],
+        [ a schema:Person ;
+            schema:familyName "Xia" ;
+            schema:givenName "Rui" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "Information Sciences" ] ;
+    dcterms:title "Ensemble of feature sets and classification algorithms for sentiment classification" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.ins.2010.11.023"^^xsd:anyURI .
+
+:BIBREF24_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "6010" ;
+    prism:issueIdentifier "5" ;
+    prism:startingPage "6000" ;
+    prism:volume "39" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Kang" ;
+            schema:givenName "Hanhoon" ],
+        [ a schema:Person ;
+            schema:familyName "Han" ;
+            schema:givenName "Dongil" ],
+        [ a schema:Person ;
+            schema:familyName "Yoo" ;
+            schema:givenName "Seong" ] ;
+    dcterms:issued 2012 ;
+    dcterms:publisher [ schema:name "Expert Systems with Applications" ] ;
+    dcterms:title "Senti-lexicon and improved Naïve Bayes algorithms for sentiment analysis of restaurant reviews" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.eswa.2011.11.107"^^xsd:anyURI .
+
+:BIBREF25_72b08ddb4 a deo:BibliographicReference ;
+    prism:issueIdentifier "4" ;
+    prism:volume "3" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 2013 ;
+    dcterms:publisher [ schema:name "Int. J. Adv. Comput. Res" ] ;
+    dcterms:title "The Comparison of Sentiment Analysis of Moon Knight Movie Reviews between Multinomial Naive Bayes and Support Vector Machine" ;
+    datacite:doi "http://dx.doi.org/10.37473/fic/10.15408/aism.v6i1.26045"^^xsd:anyURI .
+
+:BIBREF26_72b08ddb4 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Yadav" ;
+            schema:givenName "Divakar" ],
+        [ a schema:Person ;
+            schema:familyName "Gautam" ;
+            schema:givenName "Geetika" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "2014 Seventh International Conference on Contemporary Computing (IC3)" ] ;
+    dcterms:title "Sentiment analysis of twitter data using machine learning approaches and semantic analysis" ;
+    datacite:doi "http://dx.doi.org/10.1109/ic3.2014.6897213"^^xsd:anyURI .
+
+:BIBREF27_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "541" ;
+    prism:startingPage "527" ;
+    prism:volume "31" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ortigosa" ;
+            schema:givenName "Alvaro" ],
+        [ a schema:Person ;
+            schema:familyName "Martín" ;
+            schema:givenName "José" ],
+        [ a schema:Person ;
+            schema:familyName "Carro" ;
+            schema:givenName "Rosa" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Computers in Human Behavior" ] ;
+    dcterms:title "Sentiment analysis in Facebook and its application to e-learning" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.chb.2013.05.024"^^xsd:anyURI .
+
+:BIBREF28_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "8" ;
+    prism:startingPage "2" ;
+    prism:volume "5" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Zou" ;
+            schema:givenName "Quan" ],
+        [ a schema:Person ;
+            schema:familyName "Lin" ;
+            schema:givenName "Ziyu" ],
+        [ a schema:Person ;
+            schema:familyName "Xie" ;
+            schema:givenName "Sifa" ],
+        [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Meihong" ],
+        [ a schema:Person ;
+            schema:familyName "Ju" ;
+            schema:givenName "Ying" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "Big Data Research" ] ;
+    dcterms:title "Finding the Best Classification Threshold in Imbalanced Classification" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.bdr.2015.12.001"^^xsd:anyURI .
+
+:BIBREF29_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "1627" ;
+    prism:issueIdentifier "5" ;
+    prism:startingPage "1621" ;
+    prism:volume "3" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Nandi" ;
+            schema:givenName "V" ],
+        [ a schema:Person ;
+            schema:givenName "S" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "International Research Journal of Engineering and Technology (IRJET)" ] ;
+    dcterms:title "Political sentiment analysis using hybrid approach" .
+
+:BIBREF2_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "558" ;
+    prism:issueIdentifier "5" ;
+    prism:startingPage "526" ;
+    prism:volume "12" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Moens" ;
+            schema:givenName "M.-F" ],
+        [ a schema:Person ;
+            schema:familyName "Boiy And" ;
+            schema:givenName "E" ] ;
+    dcterms:issued 2008 ;
+    dcterms:publisher [ schema:name "Information Retrieval" ] ;
+    dcterms:title "A machine learning approach to sentiment analysis in multilingual Web texts" .
+
+:BIBREF30_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "3307" ;
+    prism:startingPage "2456" ;
+    prism:volume "IJSRCSEIT" ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "A hybrid feedback-based book recommendation system using sentiment analysis" ] .
+
+:BIBREF31_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "175" ;
+    prism:startingPage "165" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Mumtaz" ;
+            schema:givenName "Deebha" ],
+        [ a schema:Person ;
+            schema:familyName "Ahuja" ;
+            schema:givenName "Bindiya" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Innovations in Computational Intelligence" ] ;
+    dcterms:title "A Lexical and Machine Learning-Based Hybrid System for Sentiment Analysis" ;
+    datacite:doi "http://dx.doi.org/10.1007/978-981-10-4555-4_11"^^xsd:anyURI .
+
+:BIBREF32_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "1625" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "1611" ;
+    prism:volume "29" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Joshi" ;
+            schema:givenName "Nisheeth" ],
+        [ a schema:Person ;
+            schema:familyName "Gupta" ;
+            schema:givenName "Itisha" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Journal of Intelligent Systems" ] ;
+    dcterms:title "Enhanced Twitter Sentiment Analysis Using Hybrid Approach and by Accounting Local Contextual Semantic" ;
+    datacite:doi "http://dx.doi.org/10.1515/jisys-2019-0106"^^xsd:anyURI .
+
+:BIBREF33_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "2989" ;
+    prism:issueIdentifier "4" ;
+    prism:startingPage "2969" ;
+    prism:volume "23" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Vishwakarma" ;
+            schema:givenName "Dinesh" ],
+        [ a schema:Person ;
+            schema:familyName "Yadav" ;
+            schema:givenName "Ashima" ] ;
+    dcterms:issued 2020 ;
+    dcterms:publisher [ schema:name "Cluster Computing" ] ;
+    dcterms:title "A comparative study on bio-inspired algorithms for sentiment analysis" ;
+    datacite:doi "http://dx.doi.org/10.1007/s10586-020-03062-w"^^xsd:anyURI .
+
+:BIBREF34_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "7079" ;
+    prism:issueIdentifier "16" ;
+    prism:startingPage "7067" ;
+    prism:volume "23" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Kalarani" ;
+            schema:givenName "P" ],
+        [ a schema:Person ;
+            schema:familyName "Selva Brunda" ;
+            schema:givenName "S" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Soft Computing" ] ;
+    dcterms:title "Sentiment analysis by POS and joint sentiment topic features using SVM and ANN" ;
+    datacite:doi "http://dx.doi.org/10.1007/s00500-018-3349-9"^^xsd:anyURI .
+
+:BIBREF35_72b08ddb4 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Wahyudi" ;
+            schema:givenName "Mochamad" ],
+        [ a schema:Person ;
+            schema:familyName "Kristiyanti" ;
+            schema:givenName "Dinar" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "2017 5th International Conference on Cyber and IT Service Management (CITSM)" ] ;
+    dcterms:title "Feature selection based on Genetic algorithm, particle swarm optimization and principal component analysis for opinion mining cosmetic product review" ;
+    datacite:doi "http://dx.doi.org/10.1109/citsm.2017.8089278"^^xsd:anyURI .
+
+:BIBREF36_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "403" ;
+    prism:issueIdentifier "7" ;
+    prism:startingPage "381" ;
+    prism:volume "29" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Jiang" ;
+            schema:givenName "Huimin" ],
+        [ a schema:Person ;
+            schema:familyName "Kwong" ;
+            schema:givenName "C" ],
+        [ a schema:Person ;
+            schema:familyName "Park" ;
+            schema:givenName "W" ],
+        [ a schema:Person ;
+            schema:familyName "Yu" ;
+            schema:givenName "K" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Journal of Engineering Design" ] ;
+    dcterms:title "A multi-objective PSO approach of mining association rules for affective design based on online customer reviews" ;
+    datacite:doi "http://dx.doi.org/10.1080/09544828.2018.1475629"^^xsd:anyURI .
+
+:BIBREF3_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "307" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "267" ;
+    prism:volume "37" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Brooke" ;
+            schema:givenName "Julian" ],
+        [ a schema:Person ;
+            schema:familyName "Tofiloski" ;
+            schema:givenName "Milan" ],
+        [ a schema:Person ;
+            schema:familyName "Stede" ;
+            schema:givenName "Manfred" ],
+        [ a schema:Person ;
+            schema:familyName "Voll" ;
+            schema:givenName "Kimberly" ],
+        [ a schema:Person ;
+            schema:familyName "Taboada" ;
+            schema:givenName "Maite" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Computational Linguistics" ] ;
+    dcterms:title "Lexicon-Based Methods for Sentiment Analysis" ;
+    datacite:doi "http://dx.doi.org/10.1162/coli_a_00049"^^xsd:anyURI .
+
+:BIBREF5_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "178" ;
+    prism:startingPage "162" ;
+    prism:volume "84" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Shapira" ;
+            schema:givenName "Bracha" ],
+        [ a schema:Person ;
+            schema:familyName "Ofek" ;
+            schema:givenName "Nir" ],
+        [ a schema:Person ;
+            schema:familyName "Katz" ;
+            schema:givenName "Gilad" ] ;
+    dcterms:issued 2015 ;
+    dcterms:publisher [ schema:name "Knowledge-Based Systems" ] ;
+    dcterms:title "ConSent: Context-based sentiment analysis" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.knosys.2015.04.009"^^xsd:anyURI .
+
+:BIBREF6_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "85" ;
+    prism:startingPage "71" ;
+    prism:volume "78" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ducange" ;
+            schema:givenName "Pietro" ],
+        [ a schema:Person ;
+            schema:familyName "Vecchio" ;
+            schema:givenName "Massimo" ],
+        [ a schema:Person ;
+            schema:familyName "Fazzolari" ;
+            schema:givenName "Michela" ],
+        [ a schema:Person ;
+            schema:familyName "Petrocchi" ;
+            schema:givenName "Marinella" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Engineering Applications of Artificial Intelligence" ] ;
+    dcterms:title "An effective Decision Support System for social media listening based on cross-source sentiment analysis models" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.engappai.2018.10.014"^^xsd:anyURI .
+
+:BIBREF7_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "10" ;
+    prism:startingPage "1" ;
+    prism:volume "155" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Fangzhao" ],
+        [ a schema:Person ;
+            schema:familyName "Huang" ;
+            schema:givenName "Yongfeng" ],
+        [ a schema:Person ;
+            schema:familyName "Yuan" ;
+            schema:givenName "Zhigang" ],
+        [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Sixing" ],
+        [ a schema:Person ;
+            schema:familyName "Liu" ;
+            schema:givenName "Junxin" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Knowledge-Based Systems" ] ;
+    dcterms:title "Domain attention model for multi-domain sentiment classification" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.knosys.2018.05.004"^^xsd:anyURI .
+
+:BIBREF8_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "3834" ;
+    prism:issueIdentifier "10" ;
+    prism:startingPage "3821" ;
+    prism:volume "20" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Shang" ;
+            schema:givenName "Lin" ],
+        [ a schema:Person ;
+            schema:familyName "Liu" ;
+            schema:givenName "Xing" ],
+        [ a schema:Person ;
+            schema:familyName "Zhou" ;
+            schema:givenName "Zhe" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "Soft Computing" ] ;
+    dcterms:title "Particle swarm optimization-based feature selection in sentiment classification" ;
+    datacite:doi "http://dx.doi.org/10.1007/s00500-016-2093-2"^^xsd:anyURI .
+
+:BIBREF9_72b08ddb4 a deo:BibliographicReference ;
+    prism:endingPage "1543" ;
+    prism:startingPage "1532" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Manning" ;
+            schema:givenName "Christopher" ],
+        [ a schema:Person ;
+            schema:familyName "Socher" ;
+            schema:givenName "Richard" ],
+        [ a schema:Person ;
+            schema:familyName "Pennington" ;
+            schema:givenName "Jeffrey" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)" ] ;
+    dcterms:title "Glove: Global Vectors for Word Representation" ;
+    datacite:doi "http://dx.doi.org/10.3115/v1/d14-1162"^^xsd:anyURI .
+
+:table_1_72b08ddb4 a doco:Table ;
+    po:contains :table_box_1_72b08ddb4,
+        :table_description_1_72b08ddb4,
+        :table_label_1_72b08ddb4 .
+

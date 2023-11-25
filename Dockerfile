@@ -4,6 +4,7 @@ COPY requirements.txt /home/requirements.txt
 COPY embed_papers.py /home/embed_papers.py
 COPY embed_concepts.py /home/embed_concepts.py
 COPY ontology_parsing /home/ontology_parsing
+COPY container_test /container_test
 
 RUN apt-get update
 RUN apt-get install -y git

@@ -40,3 +40,24 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  container-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up containers
+        run: |
+          docker build -t publication_embedding_image .
+          docker run -d --name embedding-container publication_embedding_image
+
+          sleep 10
+
+      - name: Check if container runs properly
+        run: |
+          docker exec embedding-container bash /container_test/test_script.sh
+
+      - name: Clean up
+        run: |
+          docker stop embedding-container
+          docker rm  embedding-container
