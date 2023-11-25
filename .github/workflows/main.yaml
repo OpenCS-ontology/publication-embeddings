@@ -23,10 +23,12 @@ jobs:
 
           sleep 10
 
-      - name: Check if container runs properly
+      - name: Check if paper embedding runs properly
         run: |
-          docker exec embedding-container bash /container_test/test_script.sh
-
+          docker exec embedding-container bash /container_test/test_script_papers.sh
+      - name: Check if concept embedding runs properly
+        run: |
+          docker exec embedding-container bash /container_test/test_script_concepts.sh
       - name: Clean up
         run: |
           docker stop embedding-container
