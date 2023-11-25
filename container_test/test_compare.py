@@ -17,12 +17,14 @@ if __name__ == "__main__":
     if not os.path.exists(test_out):
         os.mkdir(test_out)
     for ttl_file in os.listdir(test_in_ttl):
+        print(ttl_file)
         final_in_path = os.path.join(test_in_ttl, ttl_file)
         final_out_path = os.path.join(test_out)
         final_output_ttl = ttl_file
         mod_ttl_file = "".join([char for char in ttl_file.lower() if char.isalpha()])
         found_file_flag = False
         for out_ttl in os.listdir(final_out_path):
+            print(out_ttl)
             mod_out_ttl = "".join([char for char in out_ttl.lower() if char.isalpha()])
             if fuzz.ratio(mod_ttl_file, mod_out_ttl) > 95:
                 final_out_path = os.path.join(test_out, out_ttl)
