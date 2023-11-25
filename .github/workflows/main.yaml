@@ -19,9 +19,9 @@ jobs:
       - name: Set up containers
         run: |
           docker build -t publication_embedding_image .
-          docker run -d --name embedding-container publication_embedding_image
+          docker run -t -d --name embedding-container publication_embedding_image
 
-          sleep 30
+          sleep 10
 
       - name: Check if container runs properly
         run: |
