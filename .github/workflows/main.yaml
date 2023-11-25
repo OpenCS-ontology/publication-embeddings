@@ -51,7 +51,7 @@ jobs:
           docker build -t publication_embedding_image .
           docker run -d --name embedding-container publication_embedding_image
 
-          sleep 10
+          sleep 30
 
       - name: Check if container runs properly
         run: |
