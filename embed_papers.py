@@ -1,5 +1,5 @@
 from rdflib import Graph, Literal, Namespace
-from rdflib.namespace import XSD
+from rdflib.namespace import XSD, RDF
 from transformers import AutoTokenizer, AutoModel
 import os
 import torch
@@ -40,20 +40,25 @@ def extract_abstract_title(g: Graph):
 
     return abstract, title
 
-def add_embedding_to_graph(g, embedding):
+def add_embedding_to_graph(g :Graph, embedding):
     datacite = Namespace("http://purl.org/spar/datacite/")
+    fabio = Namespace("http://purl.org/spar/fabio/")
     bn = Namespace("https://w3id.org/ocs/ont/papers/")
-
     g.bind("datacite", datacite)
+    g.bind("fabio", fabio)
     g.bind("", bn)
 
-    blank_node = g.value(predicate=datacite.hasDescriptionType, object=datacite.abstract)
-    g.add
-    ((
-        blank_node,
-        bn.hasWordEmbedding,
-        Literal(embedding, datatype=XSD.string),
-    ))
+    paper = g.value(predicate=RDF.type, object=fabio.ResearchPaper)
+    blank_node = g.value(
+        predicate=datacite.hasDescriptionType, object=datacite.abstract
+    )
+    g.add(
+        (
+            blank_node,
+            bn.hasWordEmbedding,
+            Literal(embedding, datatype=XSD.string),
+        )
+    )
     return g
 
 
@@ -98,13 +103,13 @@ def main():
 
                         embedding = create_embedding(text_batch, model_papers, tokenizer)[0]
 
-                        g = add_embedding_to_graph(g, embedding)
+                        g_emb = add_embedding_to_graph(g, embedding)
 
                         with open(os.path.join(dir_path_out, ttl_file), "wb") as file:
-                            g = g.serialize(format="turtle")
-                            if isinstance(g, str):
-                                g = g.encode()
-                            file.write(g)
+                            g_emb = g_emb.serialize(format="turtle")
+                            if isinstance(g_emb, str):
+                                g_emb = g_emb.encode()
+                            file.write(g_emb)
 
 
 if __name__ == "__main__":
