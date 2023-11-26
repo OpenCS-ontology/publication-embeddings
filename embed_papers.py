@@ -49,12 +49,9 @@ def add_embedding_to_graph(g :Graph, embedding):
     g.bind("", bn)
 
     paper = g.value(predicate=RDF.type, object=fabio.ResearchPaper)
-    blank_node = g.value(
-        predicate=datacite.hasDescriptionType, object=datacite.abstract
-    )
     g.add(
         (
-            blank_node,
+            paper,
             bn.hasWordEmbedding,
             Literal(embedding, datatype=XSD.string),
         )
