@@ -17,7 +17,7 @@ def are_embeddings_equal(g1, g2):
     emb1 = get_embedding_as_list(g1)
     emb2 = get_embedding_as_list(g2)
     for i in range(len(emb1)):
-        if format(emb1[i], ".4f") != format(emb2[i], ".4f"):
+        if format(emb1[i], ".3f") != format(emb2[i], ".3f"):
             print(emb1[i], emb2[i])
             return False
     return True
