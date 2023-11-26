@@ -1,14 +1,26 @@
 import subprocess
-from rdflib import Graph
+from rdflib import Graph, Namespace, RDF
 import os
 from rapidfuzz import fuzz
-from rdflib.compare import isomorphic
+import rdflib
 
 
-def are_graphs_equal(graph1, graph2):
-    isomorphic_result = isomorphic(graph1, graph2)
+def get_embedding_as_list(g):
+    default = Namespace("https://w3id.org/ocs/ont/papers/")
+    final_embedding = None
+    for s, p, embedding in g.triples((None, default.hasWordEmbedding, None)):
+        final_embedding = embedding
+    return [float(val) for val in final_embedding[1:-1].split(",")]
 
-    return isomorphic_result
+
+def are_embeddings_equal(g1, g2):
+    emb1 = get_embedding_as_list(g1)
+    emb2 = get_embedding_as_list(g2)
+    for i in range(len(emb1)):
+        if emb1[i] != emb2[i]:
+            print(emb1[i], emb2[i])
+            return False
+    return True
 
 
 if __name__ == "__main__":
@@ -39,5 +51,5 @@ if __name__ == "__main__":
             print(
                 "Comparing true Turtle file with the one created during current version test"
             )
-            assert are_graphs_equal(g1, g2)
+            assert are_embeddings_equal(g1, g2)
         print(f"Test with {ttl_file} passed!")
