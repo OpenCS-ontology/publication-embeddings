@@ -1,6 +1,5 @@
 # Publication embeddings
-
-This component creates embeddings for abstracts and titles of academic research papers. It takes the articles' Turtle files and enriches them with embedding vectors. Additionally, this module generates embeddings for keywords extracted from the OpenCS ontology and saves them in JSON format.
+Description of this module is available in [OpenCS wiki](https://github.com/OpenCS-ontology/OpenCS/wiki/KG-pipeline#publication-embedder)
 
 ## Authors
 
