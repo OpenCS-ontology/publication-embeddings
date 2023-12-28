@@ -1,21 +1,25 @@
 from rdflib import Graph, Literal, Namespace
 from rdflib.namespace import XSD, RDF
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModel, AutoConfig
 import os
 import torch
 import tqdm
+import re
 
 def create_embedding(text_batch, model, tokenizer):
     inputs = tokenizer(
         text_batch,
-        padding=True,
+        padding=False,
         truncation=True,
-        return_tensors="pt",
+        return_tensors='pt',
+        max_length=512,
         return_token_type_ids=False,
-        max_length=768,
-        )
+    )
+
     output = model(**inputs)
+    
     return output.last_hidden_state[:, 0, :].tolist()
+    
 
 def extract_abstract_title(g: Graph):
     result = g.query(
@@ -43,16 +47,16 @@ def extract_abstract_title(g: Graph):
 def add_embedding_to_graph(g :Graph, embedding):
     datacite = Namespace("http://purl.org/spar/datacite/")
     fabio = Namespace("http://purl.org/spar/fabio/")
-    bn = Namespace("https://w3id.org/ocs/ont/papers/")
+    ocs_papers = Namespace("https://w3id.org/ocs/ont/papers/")
     g.bind("datacite", datacite)
     g.bind("fabio", fabio)
-    g.bind("", bn)
+    g.bind("ocs_papers", ocs_papers)
 
     paper = g.value(predicate=RDF.type, object=fabio.ResearchPaper)
     g.add(
         (
             paper,
-            bn.hasWordEmbedding,
+            ocs_papers.hasWordEmbedding,
             Literal(embedding, datatype=XSD.string),
         )
     )
@@ -95,6 +99,7 @@ def main():
                         g.parse(os.path.join(dir_path, ttl_file), format="ttl")
 
                         abstract, title = extract_abstract_title(g)
+                        abstract, title = re.sub(r'[\r\n]|&nbsp;', '', abstract), re.sub(r'[\r\n]|&nbsp;', '', title)
 
                         text_batch = [title + tokenizer.sep_token + abstract]
 
