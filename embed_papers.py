@@ -6,11 +6,11 @@ import torch
 import tqdm
 import re
 
-def create_embedding(text_batch, model, tokenizer):
+def create_embedding(text_batch, model, tokenizer, padding=True, truncation=True):
     inputs = tokenizer(
         text_batch,
-        padding=False,
-        truncation=True,
+        padding=padding,
+        truncation=truncation,
         return_tensors='pt',
         max_length=512,
         return_token_type_ids=False,
@@ -103,7 +103,7 @@ def main():
 
                         text_batch = [title + tokenizer.sep_token + abstract]
 
-                        embedding = create_embedding(text_batch, model_papers, tokenizer)[0]
+                        embedding = create_embedding(text_batch, model_papers, tokenizer, padding=False)[0]
 
                         g_emb = add_embedding_to_graph(g, embedding)
 
